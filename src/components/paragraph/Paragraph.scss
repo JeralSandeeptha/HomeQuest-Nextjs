@@ -1,0 +1,49 @@
+@import '../../styles/all';
+
+.paragraph {
+    font-family: $primary-font;
+    color: $neutral_color_four;
+}
+
+.large {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 180%;
+}
+
+.medium {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 180%;
+    text-decoration: none;
+}
+
+.small {
+    letter-spacing: -.4px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 180%;
+    text-decoration: none;
+}
+
+.extra-small {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 180%;
+}
+
+.white {
+    color: $white;
+}
+
+.black {
+    color: $black;
+}
