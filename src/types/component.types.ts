@@ -4,6 +4,7 @@ export type HeadingProps = {
     text: string,
     type: 'h1' | 'h2' | 'h3' | 'h4' | 'h5',
     style?: CSSProperties,
+    color?: 'black' | 'white'
 }
 
 export type ParagraphProps = {

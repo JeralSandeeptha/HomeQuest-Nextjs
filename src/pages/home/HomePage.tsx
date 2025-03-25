@@ -1,6 +1,10 @@
+import UpperFooter from "@/components/upper-footer/UpperFooter"
+
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <>
+      <UpperFooter />
+    </>
   )
 }
 
