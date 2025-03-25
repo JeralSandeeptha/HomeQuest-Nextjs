@@ -1,0 +1,53 @@
+@import "../../styles/all";
+
+.button {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 180%;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  gap: 12px;
+
+  .right-arrow {
+    width: 24px;
+  }
+}
+
+.primary {
+  background-color: $theme_color_one;
+  border-radius: 100px;
+  padding: 11px 24px;
+  transition: background-color 0.5s;
+
+  @media screen and (max-width: 479px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.secondary {
+    background-color: $theme_color_two;
+    border-radius: 12px;
+    padding: 18px 32px;
+    transition: background-color .5s;
+    font-weight: 500;
+    line-height: 180%;
+    text-decoration: none;
+}
+
+.link {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 180%;
+    text-decoration: none;
+    border-radius: 0;
+    padding: 0;
+    background-color: $white;
+    border-radius: 100px;
+    padding: 11px 24px;
+}
