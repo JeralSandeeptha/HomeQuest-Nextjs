@@ -31,7 +31,7 @@ const Heading = (props: HeadingProps) => {
     }, []);
 
     return (
-        <h1 className={`heading ${type}`}>{ props.text }</h1>
+        <h1 style={{ color: props.color == 'white' ? 'white': 'black' }} className={`heading ${type}`}>{ props.text }</h1>
     );
 }
 
