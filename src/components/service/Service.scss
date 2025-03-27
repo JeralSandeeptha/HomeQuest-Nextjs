@@ -1,0 +1,85 @@
+@import '../../styles/all';
+
+.service {
+    background-color: rebeccapurple;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    border-radius: $border-radius;
+    position: relative;
+    cursor: pointer;
+
+    @media screen and (max-width: 980px) {
+        max-width: 600px;
+    }
+    @media screen and (max-width: $mobile-portrait) {
+        max-height: 500px;
+    }
+
+    .link-container {
+        top: 20px;
+        right: 20px;
+        position: absolute;
+        background-color: $white;
+        border-radius: 50%;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .link-image {
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    .service-img {
+        width: 100%;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+        object-fit: cover;
+    }
+
+    .service-content {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        padding: 20px;
+        align-items: center;
+        gap: 20px;
+        background-image: url('https://cdn.prod.website-files.com/66f262050f96e0f9e1e4568c/66fbc223487aa8e83d26c2ef_Blur.png');
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+        background-position: 0 0;
+        background-size: cover;
+
+        .service-content-left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .service-icon-container {
+                display: flex;
+                align-items: center;
+                padding: 15px;
+                border-radius: 50%;
+                justify-content: center;
+                background-image: url('https://cdn.prod.website-files.com/66f262050f96e0f9e1e4568c/66fbc223487aa8e83d26c2ef_Blur.png');
+                background-size: cover;
+                width: 56px;
+                height: 56px;
+                padding: 16px;
+                
+                .service-icon {
+                    width: 24px;
+                    height: 24px;
+                    aspect-ratio: auto 24 / 24;
+                }
+            }
+        }
+
+        .service-content-right {
+
+        }
+    }
+}
