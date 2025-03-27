@@ -1,0 +1,34 @@
+@import '../../styles/all';
+
+.featured-services {
+    width: 100%;
+    min-height: 100vh;
+    background-color: $neutral_color_one;
+    padding: 0 2rem;
+
+    .featured-services-inner {
+        max-width: $max-width;
+        margin: 0 auto;
+        min-height: 100vh;
+
+        .fs-upper {
+            text-align: center;
+            padding: 5em 0;
+        }
+
+        .fs-lower {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 0 0 5em 0;
+            gap: 20px;
+
+            @media screen and (max-width: 980px) {
+                grid-template-columns: 1fr;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
