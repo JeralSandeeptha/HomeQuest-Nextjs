@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+import React, { FormEvent, useState } from 'react';
 import './AddNewServicePage.scss';
 import { cn } from '@/lib/utils';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -12,6 +13,21 @@ const AddNewServicePage = ({
   ...props
 }: React.ComponentPropsWithoutRef<"div">) => {
 
+  const [name, setName] = useState<string>('');
+  const [image, setImage] = useState<string>('');
+  const [price, setPrice] = useState<string>('');
+  const [description, setDescription] = useState<string>('');
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    console.log({
+      name,
+      image,
+      price,
+      description,
+    });
+  }
+
   return (
     <div className='add-new-service-page'>
         <div className={cn("flex flex-col gap-6 w-full", className)} {...props}>
@@ -23,7 +39,7 @@ const AddNewServicePage = ({
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <form>
+                  <form onSubmit={handleSubmit}>
                     <div className="flex flex-col gap-4">
                       <div className="grid gap-2">
                         <Label htmlFor="name">Service Name</Label>
@@ -32,6 +48,8 @@ const AddNewServicePage = ({
                           type="text"
                           placeholder="Enter Service Name"
                           required
+                          value={name}
+                          onChange={(e) => setName(e.target.value)}
                         />
                       </div>
                       <div className="grid gap-2">
@@ -41,6 +59,8 @@ const AddNewServicePage = ({
                           type="text"
                           placeholder="Enter Service Image URL"
                           required
+                          value={image}
+                          onChange={(e) => setImage(e.target.value)}
                         />
                       </div>
                       <div className="grid gap-2">
@@ -50,6 +70,8 @@ const AddNewServicePage = ({
                           type="text"
                           placeholder="Enter Service Starting Price ($)"
                           required
+                          value={price}
+                          onChange={(e) => setPrice(e.target.value)}
                         />
                       </div>
                       <div className="grid gap-2">
@@ -58,6 +80,8 @@ const AddNewServicePage = ({
                           id="description"
                           placeholder="Enter Service Description"
                           required
+                          value={description}
+                          onChange={(e) => setDescription(e.target.value)}
                         />
                       </div>
                       <Button type="submit" className="w-full">
