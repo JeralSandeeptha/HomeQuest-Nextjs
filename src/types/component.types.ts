@@ -1,4 +1,4 @@
-import { CSSProperties } from "react"
+import { CSSProperties, Dispatch, SetStateAction } from "react"
 
 export type HeadingProps = {
     text: string,
@@ -20,4 +20,17 @@ export type ButtonProps = {
     type: 'primary' | 'secondary' | 'link',
     isIcon: boolean,
     style?: CSSProperties,
+}
+
+export type AlertMessageProps = {
+    text: string,
+    icon: string,
+    message: string
+}
+
+export type NotificationContextType = {
+    isError: boolean,
+    setIsError: Dispatch<SetStateAction<boolean>>,
+    isSuccess: boolean,
+    setIsSuccess: Dispatch<SetStateAction<boolean>>,
 }

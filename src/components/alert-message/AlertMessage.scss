@@ -1,0 +1,10 @@
+@import '../../styles/all';
+
+.alert-message {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 10000;
+    max-width: 300px;
+    width: 300px;
+}
