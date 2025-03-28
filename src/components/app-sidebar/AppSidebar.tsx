@@ -1,12 +1,14 @@
 "use client"
-import * as React from "react"
+import * as React from "react";
 import {
   BookOpen,
   Bot,
   Command,
-  Settings2,
+  MapPinHouse,
   SquareTerminal,
-} from "lucide-react"
+  CircleUser,
+  LayoutDashboard,
+} from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -15,9 +17,9 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/ui/sidebar"
-import { NavUser } from "../nav-user/NavUser"
-import { NavMain } from "../nav-main/NavMain"
+} from "@/components/ui/sidebar";
+import { NavUser } from "../nav-user/NavUser";
+import { NavMain } from "../nav-main/NavMain";
 import Link from "next/link"
 const data = {
   user: {
@@ -27,87 +29,64 @@ const data = {
   },
   navMain: [
     {
-      title: "Playground",
-      url: "#",
+      title: "Dashboard",
+      url: "/dashboard",
+      icon: LayoutDashboard,
+      isActive: true,
+    },
+    {
+      title: "Service Management",
+      url: "/dashboard/services",
       icon: SquareTerminal,
       isActive: true,
       items: [
         {
-          title: "History",
-          url: "#",
-        },
-        {
-          title: "Starred",
-          url: "#",
-        },
-        {
-          title: "Settings",
-          url: "#",
+          title: "Add New Service",
+          url: "/dashboard/services/add-new-service",
         },
       ],
     },
     {
-      title: "Models",
-      url: "#",
+      title: "Author Management",
+      url: "/dashboard/authors",
       icon: Bot,
       items: [
         {
-          title: "Genesis",
-          url: "#",
-        },
-        {
-          title: "Explorer",
-          url: "#",
-        },
-        {
-          title: "Quantum",
-          url: "#",
+          title: "Add New Author",
+          url: "/dashboard/authors/add-new-author",
         },
       ],
     },
     {
-      title: "Documentation",
-      url: "#",
+      title: "Blog Management",
+      url: "/dashboard/blogs",
       icon: BookOpen,
       items: [
         {
-          title: "Introduction",
-          url: "#",
-        },
-        {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
-          url: "#",
+          title: "Add New Blog",
+          url: "/dashboard/blogs/add-new-blog",
         },
       ],
     },
     {
-      title: "Settings",
-      url: "#",
-      icon: Settings2,
+      title: "Property Management",
+      url: "/dashboard/properties",
+      icon: MapPinHouse,
       items: [
         {
-          title: "General",
-          url: "#",
+          title: "Add New Property",
+          url: "/dashboard/properties/add-new-property",
         },
+      ],
+    },
+    {
+      title: "Agent Management",
+      url: "/dashboard/agents",
+      icon: CircleUser,
+      items: [
         {
-          title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
-          url: "#",
+          title: "Add New Agent",
+          url: "/dashboard/agents/add-new-agent",
         },
       ],
     },
