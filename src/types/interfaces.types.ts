@@ -8,3 +8,10 @@ export interface IService{
     updatedAt: string,
     __v: number
 }
+
+export interface IServicePost{
+    service_name: string,
+    service_image: string,
+    service_start_price: string,
+    service_description: string,
+}
